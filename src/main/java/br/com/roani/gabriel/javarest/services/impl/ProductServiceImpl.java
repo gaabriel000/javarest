@@ -22,7 +22,15 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> query(ProductParam params) {
-        return productRepository.query(params);
+        return productRepository.query(
+            params.getId(),
+            params.getName(),
+            params.getCategory(),
+            params.getMultiplier(),
+            params.getPrice(),
+            params.getHidden(),
+            params.getAvailable()
+    );
     }
 
     @Override

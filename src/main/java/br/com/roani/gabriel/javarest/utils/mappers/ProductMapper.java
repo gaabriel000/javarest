@@ -4,6 +4,9 @@ import br.com.roani.gabriel.javarest.models.Product;
 import br.com.roani.gabriel.javarest.models.dtos.ProductDTO;
 
 public class ProductMapper {
+
+    private ProductMapper(){}
+
     public static Product toModel(ProductDTO dto) {
         if (dto == null) {
             return null;
